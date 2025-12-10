@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlas Digital - Reflexión: Tono Muscular</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-sand text-text-primary min-h-screen">
+
+    <!-- Diapositiva - Reflexión sobre Tono Muscular -->
+    <div id="slide-1" class="slide flex flex-col items-center justify-center text-center p-8">
+        <h2 class="title-font text-4xl font-bold mb-6 text-lila-sensorial">
+            Registro: Tono Muscular
+        </h2>
+        <p class="text-xl mb-4 font-semibold text-ocre-calido">
+            ¿Qué músculo habló primero cuando recorriste tu cuerpo?
+        </p>
+        
+        <textarea id="reflection-tone" class="w-full max-w-xl h-40 p-4 border-2 border-lila-sensorial/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-lila-sensorial resize-none" placeholder="¿Dónde sentiste más tensión? ¿Dónde más ligereza?"></textarea>
+
+        <div class="flex gap-4 mt-8">
+            <button onclick="openFysiologyModal('muscle-tone')" class="btn-primary bg-white text-lila-sensorial border-2 border-lila-sensorial hover:bg-lila-sensorial/10">
+                🔬 Fisiología
+            </button>
+            <a href="modulo3-inicio.html" class="btn-primary btn-ocre btn-inline no-underline">
+                Siguiente módulo
+            </a>
+        </div>
+    </div>
+
+    <!-- Modal de Fisiología -->
+    <div id="body-modal" class="modal" onclick="if(event.target === this) closeModal()">
+        <div class="bg-white p-6 rounded-xl shadow-2xl max-w-sm w-full title-font text-center">
+            <h3 id="modal-title" class="text-2xl font-bold mb-4 text-lila-sensorial">Fisiología</h3>
+            <div id="modal-content">
+                <p class="text-gray-700">Contenido</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

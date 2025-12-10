@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlas Digital - Secuencias: Movimiento Expresivo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-sand text-text-primary min-h-screen">
+
+    <!-- Diapositiva - Secuencias de Movimiento -->
+    <div id="slide-1" class="slide flex flex-col items-center justify-center text-center p-8">
+        <h2 class="title-font text-3xl font-bold mb-8 text-gray-600">
+            Secuencias: Calidades de Movimiento
+        </h2>
+        <p class="mb-10 text-gray-700">Explorá cada consigna en tu cuerpo.</p>
+
+        <div class="flex flex-col md:flex-row gap-6 w-full max-w-3xl">
+            <!-- Tarjeta 1: Expandir -->
+            <div onclick="openBodyModal('la Expansión (Imaginá que crecés)')" class="flex-1 p-6 bg-lila-sensorial/20 rounded-xl shadow-lg border-b-4 border-lila-sensorial cursor-pointer hover:shadow-xl transition-all">
+                <p class="text-4xl mb-3">⬆️</p>
+                <h3 class="font-bold text-xl mb-2 text-lila-sensorial">Expandir</h3>
+                <p class="text-sm text-gray-700">Sentí el espacio que ocupás. Crecé desde el centro hacia los límites.</p>
+            </div>
+            <!-- Tarjeta 2: Contraer -->
+            <div onclick="openBodyModal('la Contracción (Imaginate chiquitx)')" class="flex-1 p-6 bg-celeste-respiracion/20 rounded-xl shadow-lg border-b-4 border-celeste-respiracion cursor-pointer hover:shadow-xl transition-all">
+                <p class="text-4xl mb-3">⬇️</p>
+                <h3 class="font-bold text-xl mb-2 text-celeste-respiracion">Contraer</h3>
+                <p class="text-sm text-gray-700">Llevá tu energía hacia el centro. Hacete un ovillo, buscá tu eje.</p>
+            </div>
+            <!-- Tarjeta 3: Torcer -->
+            <div onclick="openBodyModal('la Torsión (Movete en espiral)')" class="flex-1 p-6 bg-ocre-calido/20 rounded-xl shadow-lg border-b-4 border-ocre-calido cursor-pointer hover:shadow-xl transition-all">
+                <p class="text-4xl mb-3">🌀</p>
+                <h3 class="font-bold text-xl mb-2 text-ocre-calido">Torcer</h3>
+                <p class="text-sm text-gray-700">Generá una espiral con tu columna. Mirá por encima del hombro.</p>
+            </div>
+        </div>
+
+        <a href="modulo4-reflexion.html" class="btn-primary btn-lila btn-inline no-underline mt-12">
+            Reflexión sobre movimiento
+        </a>
+    </div>
+
+    <!-- Modal de Registro -->
+    <div id="body-modal" class="modal" onclick="if(event.target === this) closeModal()">
+        <div class="bg-white p-6 rounded-xl shadow-2xl max-w-sm w-full title-font text-center">
+            <h3 id="modal-title" class="text-2xl font-bold mb-4 text-lila-sensorial">¿Qué sentiste?</h3>
+            <div id="modal-content">
+                <textarea class="w-full h-20 p-2 border border-gray-300 rounded resize-none" placeholder="Registrá tu sensación..."></textarea>
+                <button onclick="closeModal()" class="mt-4 btn-primary full-width">
+                    Cerrar y continuar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

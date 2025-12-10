@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlas Digital - Mini Test Final</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-sand text-text-primary min-h-screen">
+
+    <!-- Diapositiva - MINI TEST FINAL -->
+    <div id="slide-1" class="slide flex flex-col items-center justify-start p-8 overflow-y-auto">
+        <h2 class="title-font text-4xl font-bold mb-2 text-lila-sensorial">
+            🎯 Mini Test Final
+        </h2>
+        <p class="text-lg text-gray-600 mb-12">Reflexionemos sobre lo vivido</p>
+
+        <div class="w-full max-w-2xl space-y-8">
+            <!-- Pregunta 1 -->
+            <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-celeste-respiracion">
+                <h3 class="text-lg font-semibold mb-3 text-celeste-respiracion">1. ¿Cómo cambió tu respiración?</h3>
+                <textarea id="test-q1" class="w-full h-20 p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-celeste-respiracion resize-none" placeholder="Compartí tus observaciones..."></textarea>
+            </div>
+
+            <!-- Pregunta 2 -->
+            <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-lila-sensorial">
+                <h3 class="text-lg font-semibold mb-3 text-lila-sensorial">2. ¿Qué parte de tu cuerpo liberó tensión?</h3>
+                <textarea id="test-q2" class="w-full h-20 p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-lila-sensorial resize-none" placeholder="Registrá dónde sentiste alivio..."></textarea>
+            </div>
+
+            <!-- Pregunta 3 -->
+            <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-ocre-calido">
+                <h3 class="text-lg font-semibold mb-3 text-ocre-calido">3. ¿Qué gesto te ayudó a regularte?</h3>
+                <textarea id="test-q3" class="w-full h-20 p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-ocre-calido resize-none" placeholder="¿Cuál fue tu herramienta favorita?"></textarea>
+            </div>
+
+            <!-- Pregunta 4 -->
+            <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-gray-400">
+                <h3 class="text-lg font-semibold mb-3 text-gray-700">4. ¿Qué te llevás para tu práctica profesional?</h3>
+                <textarea id="test-q4" class="w-full h-20 p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-gray-400 resize-none" placeholder="¿Cómo podrías aplicar esto en tu trabajo?"></textarea>
+            </div>
+        </div>
+
+        <a href="cierre.html" class="btn-primary btn-inline no-underline mt-12">
+            Finalizar recorrido
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

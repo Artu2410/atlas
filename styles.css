@@ -1,0 +1,166 @@
+/* Definición de variables CSS para los colores */
+:root {
+    --color-sand: #F3F1EF;
+    --color-lila: #C6A0D4;
+    --color-celeste: #8FB8CE;
+    --color-ocre: #EBC284;
+    --color-text: #333333;
+}
+
+/* Aplicación de fuentes y color de texto */
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-sand);
+}
+
+.title-font {
+    font-family: 'Cormorant', serif;
+}
+
+/* Estilos base para las diapositivas */
+.slide {
+    min-height: 100vh;
+    display: none;
+    animation: fadeIn 0.8s ease-out;
+    padding: 2rem;
+}
+
+.slide.active {
+    display: flex;
+}
+
+/* Estilo para el botón primario */
+.btn-primary {
+    font-family: 'Cormorant', serif;
+    font-weight: bold;
+    border-radius: 9999px;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    color: white;
+    background-color: var(--color-lila);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(198, 160, 212, 0.4);
+}
+
+/* Estilo para el círculo de respiración */
+#breathing-circle {
+    width: 150px;
+    height: 150px;
+    background-color: var(--color-celeste);
+    opacity: 0.6;
+    border-radius: 50%;
+    transition: all 2.5s ease-in-out;
+    box-shadow: 0 0 40px var(--color-celeste);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos del mapa corporal */
+.body-map-point {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    background-color: var(--color-ocre);
+    color: var(--color-text);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.body-map-point:hover {
+    transform: scale(1.1);
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    z-index: 50;
+    transition: opacity 0.3s;
+}
+
+.modal.active {
+    display: flex;
+}
+
+/* Animación de entrada "Desvanecer" */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Animación de las tarjetas "Flotar" */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
+}
+
+.float-animation {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Clases utilitarias para nombres personalizados usados en HTML
+   (equivalentes a los nombres de Tailwind personalizados usados antes) */
+.bg-celeste-respiracion { background-color: var(--color-celeste); }
+.bg-celeste-respiracion-20 { background-color: rgba(143,184,206,0.2); }
+.text-celeste-respiracion { color: var(--color-celeste); }
+.border-celeste-respiracion { border-color: var(--color-celeste); }
+
+.bg-lila-sensorial { background-color: var(--color-lila); }
+.bg-lila-sensorial-20 { background-color: rgba(198,160,212,0.2); }
+.text-lila-sensorial { color: var(--color-lila); }
+.border-lila-sensorial { border-color: var(--color-lila); }
+
+.bg-ocre-calido { background-color: var(--color-ocre); }
+.bg-ocre-calido-20 { background-color: rgba(235,194,132,0.2); }
+.text-ocre-calido { color: var(--color-ocre); }
+
+.bg-white { background-color: #ffffff; }
+
+/* Botones y utilidades para reemplazar estilos inline */
+.btn-inline { display: inline-block; }
+.no-underline { text-decoration: none; }
+
+.btn-celeste { background-color: var(--color-celeste); }
+.btn-lila { background-color: var(--color-lila); }
+.btn-ocre { background-color: var(--color-ocre); }
+.btn-gray { background-color: #6b7280; }
+
+.full-width { width: 100%; }
+
+/* Delays para animaciones de tarjetas */
+.delay-0 { animation-delay: 0s; }
+.delay-05 { animation-delay: 0.5s; }
+.delay-1 { animation-delay: 1s; }
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .slide {
+        padding: 1rem;
+    }
+    
+    .btn-primary {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+}

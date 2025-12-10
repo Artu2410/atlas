@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlas Digital - Reflexión: Propiocepción</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-sand text-text-primary min-h-screen">
+
+    <!-- Diapositiva - Reflexión sobre Propiocepción -->
+    <div id="slide-1" class="slide flex flex-col items-center justify-center text-center p-8">
+        <h2 class="title-font text-4xl font-bold mb-6 text-ocre-calido">
+            Registro: Propiocepción
+        </h2>
+        <p class="text-xl mb-4 font-semibold text-ocre-calido">
+            ¿Te sentiste más enfocado/a después del ejercicio?
+        </p>
+        
+        <textarea id="reflection-proprioception" class="w-full max-w-xl h-40 p-4 border-2 border-ocre-calido/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-ocre-calido resize-none" placeholder="¿Qué cambió en tu sensación de presencia?"></textarea>
+
+        <div class="flex gap-4 mt-8">
+            <button onclick="openFysiologyModal('proprioception')" class="btn-primary bg-white text-ocre-calido border-2 border-ocre-calido hover:bg-ocre-calido/10">
+                🔬 Fisiología
+            </button>
+            <a href="modulo4-inicio.html" class="btn-primary btn-ocre btn-inline no-underline">
+                Siguiente módulo
+            </a>
+        </div>
+    </div>
+
+    <!-- Modal de Fisiología -->
+    <div id="body-modal" class="modal" onclick="if(event.target === this) closeModal()">
+        <div class="bg-white p-6 rounded-xl shadow-2xl max-w-sm w-full title-font text-center">
+            <h3 id="modal-title" class="text-2xl font-bold mb-4 text-lila-sensorial">Fisiología</h3>
+            <div id="modal-content">
+                <p class="text-gray-700">Contenido</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

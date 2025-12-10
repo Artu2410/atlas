@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlas Digital - Mapa Corporal: Tono Muscular</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-sand text-text-primary min-h-screen">
+
+    <!-- Diapositiva - Mapa corporal clickeable -->
+    <div id="slide-1" class="slide flex flex-col items-center justify-start p-8">
+        <h2 class="title-font text-3xl font-bold mb-6 text-lila-sensorial">
+            Registro por Zonas
+        </h2>
+        <p class="mb-8 text-center text-gray-700">Tocá las zonas para registrar tu sensación.</p>
+
+        <div class="relative w-full max-w-sm h-96 bg-ocre-calido/10 rounded-full flex items-center justify-center">
+            <!-- Silueta simplificada (Placeholder) -->
+            <svg class="w-32 h-80 text-gray-500" viewBox="0 0 100 200" fill="currentColor">
+                <rect x="40" y="5" width="20" height="20" rx="10" /> <!-- Cabeza -->
+                <rect x="30" y="25" width="40" height="100" rx="10" /> <!-- Torso -->
+                <rect x="30" y="35" width="10" height="60" rx="5" transform="rotate(-15 30 35)" /> <!-- Brazos -->
+                <rect x="60" y="35" width="10" height="60" rx="5" transform="rotate(15 70 35)" />
+                <rect x="40" y="125" width="10" height="60" rx="5" /> <!-- Piernas -->
+                <rect x="50" y="125" width="10" height="60" rx="5" />
+            </svg>
+
+            <!-- Puntos Clickeables -->
+            <div onclick="openBodyModal('la Mandíbula')" class="body-map-point top-10 left-1/2 -translate-x-1/2 bg-lila-sensorial text-white">M</div>
+            <div onclick="openBodyModal('los Hombros')" class="body-map-point top-32 left-10">H</div>
+            <div onclick="openBodyModal('el Pecho')" class="body-map-point top-40 right-1/4">P</div>
+            <div onclick="openBodyModal('el Abdomen')" class="body-map-point top-64 left-1/3">A</div>
+            <div onclick="openBodyModal('las Manos')" class="body-map-point bottom-10 right-20 bg-celeste-respiracion text-white">N</div>
+        </div>
+
+        <div class="flex gap-4 mt-10">
+            <button onclick="openFysiologyModal('muscle-tone')" class="btn-primary bg-white text-lila-sensorial border-2 border-lila-sensorial hover:bg-lila-sensorial/10">
+                🔬 Fisiología
+            </button>
+            <a href="modulo2-microtareas.html" class="btn-primary btn-inline no-underline">
+                Microtareas de regulación
+            </a>
+        </div>
+    </div>
+
+    <!-- Modal de Registro -->
+    <div id="body-modal" class="modal" onclick="if(event.target === this) closeModal()">
+        <div class="bg-white p-6 rounded-xl shadow-2xl max-w-sm w-full title-font text-center">
+            <h3 id="modal-title" class="text-2xl font-bold mb-4 text-lila-sensorial">¿Qué sentiste aquí?</h3>
+            <div id="modal-content">
+                <textarea class="w-full h-20 p-2 border border-gray-300 rounded resize-none" placeholder="Registrá tu sensación: calor, frío, tensión, ligereza..."></textarea>
+                <button onclick="closeModal()" class="mt-4 btn-primary full-width">
+                    Cerrar y continuar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
