@@ -13,6 +13,17 @@
 
     <!-- Diapositiva - Mapa corporal clickeable -->
     <div id="slide-1" class="slide flex flex-col items-center justify-start p-8">
+        <div class="flex gap-4 mt-6 items-center">
+            <a href="modulo2-inicio.html" class="text-sm text-gray-600 underline hover:text-lila-sensorial transition-colors mr-4">
+                Volver al inicio del módulo
+            </a>
+            <a href="modulo2-microtareas.html" class="btn-primary btn-inline no-underline">
+                Microtareas de regulación
+            </a>
+        </div>
+
+        <p class="text-sm text-gray-600 mt-4 mb-4">Tercer paso: Registro por Zonas.</p>
+
         <h2 class="title-font text-3xl font-bold mb-6 text-lila-sensorial">
             Registro por Zonas
         </h2>
@@ -20,7 +31,7 @@
 
         <div class="relative w-full max-w-sm h-96 bg-ocre-calido/10 rounded-full flex items-center justify-center">
             <!-- Silueta simplificada (Placeholder) -->
-            <svg class="w-32 h-80 text-gray-500" viewBox="0 0 100 200" fill="currentColor">
+            <svg class="w-32 h-80 text-gray-501" viewBox="0 0 100 200" fill="currentColor">
                 <rect x="40" y="5" width="20" height="20" rx="10" /> <!-- Cabeza -->
                 <rect x="30" y="25" width="40" height="100" rx="10" /> <!-- Torso -->
                 <rect x="30" y="35" width="10" height="60" rx="5" transform="rotate(-15 30 35)" /> <!-- Brazos -->
@@ -35,15 +46,6 @@
             <div onclick="openBodyModal('el Pecho')" class="body-map-point top-40 right-1/4">P</div>
             <div onclick="openBodyModal('el Abdomen')" class="body-map-point top-64 left-1/3">A</div>
             <div onclick="openBodyModal('las Manos')" class="body-map-point bottom-10 right-20 bg-celeste-respiracion text-white">N</div>
-        </div>
-
-        <div class="flex gap-4 mt-10">
-            <button onclick="openFysiologyModal('muscle-tone')" class="btn-primary bg-white text-lila-sensorial border-2 border-lila-sensorial hover:bg-lila-sensorial/10">
-                🔬 Fisiología
-            </button>
-            <a href="modulo2-microtareas.html" class="btn-primary btn-inline no-underline">
-                Microtareas de regulación
-            </a>
         </div>
     </div>
 
